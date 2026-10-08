@@ -1,0 +1,9 @@
+* text=auto
+
+# Compiled output and dependency metadata are generated, not authored code.
+dist/** linguist-generated=true
+assets/** linguist-generated=true
+package-lock.json linguist-generated=true
+*.glb binary
+*.png binary
+*.pdf binary

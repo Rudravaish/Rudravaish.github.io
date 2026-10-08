@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.sites-runtime/
+.DS_Store
+build/
+asset-sources/
+__pycache__/
+*.pyc
+*.blend1
