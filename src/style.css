@@ -690,6 +690,23 @@ a {
   font-size: 12px;
   font-weight: 700;
 }
+.entry-stack {
+  margin-top: 14px;
+}
+.entry-stack h5 {
+  margin: 0 0 7px;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.entry-stack .panel-list {
+  gap: 6px;
+}
+.entry-stack .panel-list li {
+  padding: 5px 8px;
+  font-size: 11px;
+}
 .panel-link {
   display: inline-flex;
   align-items: center;

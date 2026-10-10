@@ -132,6 +132,9 @@ function setFaceDetail(open: boolean) {
 }
 
 function contentMarkup(stop: PortfolioStop) {
+  const entryTags = (label: string, tags?: string[]) => tags?.length
+    ? `<div class="entry-stack"><h5>${escapeHtml(label)}</h5><ul class="panel-list" aria-label="${escapeHtml(label)}">${tags.map(tag => `<li>${escapeHtml(tag)}</li>`).join('')}</ul></div>`
+    : '';
   return `<div class="panel-symbol" aria-hidden="true">${escapeHtml(stop.icon)}</div>
     <h2 id="panelTitle">${escapeHtml(stop.title)}</h2>
     <p class="panel-lead">${escapeHtml(stop.lead)}</p>
@@ -142,6 +145,8 @@ function contentMarkup(stop: PortfolioStop) {
         <div class="entry-meta">${escapeHtml(entry.meta)}</div>
         <h4>${escapeHtml(entry.title)}</h4>
         <p>${escapeHtml(entry.text)}</p>
+        ${entryTags('Skills', entry.skills)}
+        ${entryTags('Tools', entry.tools)}
         ${entry.link ? `<a class="panel-link" href="${escapeHtml(entry.link.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(entry.link.label)} <span aria-hidden="true">↗</span></a>` : ''}
       </article>`).join('')}
       ${group.tags ? `<ul class="panel-list">${group.tags.map(tag => `<li>${escapeHtml(tag)}</li>`).join('')}</ul>` : ''}
